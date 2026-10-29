@@ -1,0 +1,13 @@
+* text=auto
+
+*.pt     binary
+*.npz    binary
+*.png    binary
+*.jpg    binary
+*.webp   binary
+*.pdf    binary
+
+# Keep the language bar about the code we wrote
+demo/FoveaRL_demo.html  linguist-generated
+demo/data.js            linguist-generated
+demo/vendor_dl/**       linguist-vendored

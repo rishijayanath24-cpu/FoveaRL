@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FoveaRL — Foveated VR teleoperation demo</title>
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo"><div class="mark"></div>
+      <div><h1>Fovea<b>RL</b> <span style="font-weight:400;color:var(--dim);font-size:14px">· foveated streaming for VR robot teleoperation</span></h1>
+      <small>A reinforcement-learning agent decides, 5 times a second, how many bits the operator's eyes actually need.</small></div>
+    </div>
+    <div class="spacer"></div>
+    <div class="badges">
+      <span class="badge g">● real trained DQN agents</span>
+      <span class="badge">held-out seeds 10000-10003 (not hand-picked)</span>
+      <span class="badge a">simulation replay · not hardware</span>
+    </div>
+  </header>
+
+  <div id="controls">
+    <div class="grp"><span class="lbl">Network</span><span id="profbtns" class="grp"></span></div>
+    <div class="grp"><span class="lbl">Run</span><span id="seedbtns" class="grp"></span></div>
+    <div class="grp"><button id="play" class="on">❚❚ Pause</button><button id="restart">↺</button>
+      <span id="spd" class="grp"></span></div>
+    <input id="scrub" type="range" min="0" max="1000" value="0">
+    <span id="tclock">0.0 s</span>
+    <div class="fab"><button id="tour" class="hot">▶ Guided tour</button><button id="res" class="hot2">Results</button></div>
+  </div>
+
+  <main>
+    <div class="col left">
+      <div class="card">
+        <h3>Arena · same course, same network, six controllers</h3>
+        <div id="legend"></div>
+        <canvas id="arena"></canvas>
+        <div id="caption"></div>
+      </div>
+      <div class="card" style="padding:4px 6px 6px">
+        <table id="score"><thead><tr><th>Controller</th><th>Progress</th><th>Collisions</th><th>Frame age</th><th>Quality Q</th><th>Sent</th><th>Status</th></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+    <div class="col right">
+      <div class="card">
+        <div id="oprow"></div>
+        <div id="opwrap">
+          <div id="opbox">
+            <canvas id="opcanvas" width="512" height="512"></canvas>
+            <div class="hud tl"><span class="tag" id="hudwho">LIVE FEED</span></div>
+            <div class="hud tr"><div class="lab">frame age</div><div class="big" id="hudage">0</div></div>
+            <div class="hud bl"><div class="lab" id="hudact1">fovea</div><div id="hudact2" style="font-weight:600"></div></div>
+            <div class="hud br"><div class="lab">quality Q</div><div class="big" id="hudq" style="font-size:20px">0.00</div></div>
+            <div id="banner"></div>
+          </div>
+        </div>
+        <div id="lab">
+          <div class="row"><span class="k">Fovea radius r</span><span class="seg" id="labr"></span><span class="k" style="width:auto" id="labrv"></span></div>
+          <div class="row"><span class="k">Periphery res. p</span><span class="seg" id="labp"></span></div>
+          <div class="row"><span class="k">Bitrate b</span><span class="seg" id="labb"></span></div>
+          <div class="row"><span class="k">Network latency</span><input id="lablat" type="range" min="0" max="400" value="120"><span id="lablatv">120 ms</span></div>
+          <div class="small">Move the mouse over the view: it is your gaze. The sharp circle follows your gaze one latency late — exactly the mismatch the agent has to manage.</div>
+        </div>
+      </div>
+      <div class="card" id="chcard"><h3>Live telemetry</h3><canvas id="charts"></canvas></div>
+    </div>
+  </main>
+  <div id="foot">Replays of the paper's simulator (quality is a parametric proxy, operator &amp; network models are assumed). Built with Three.js · all data embedded, works offline.</div>
+</div>
+
+<div id="modal"><div id="mbox"></div></div>
+
+<script>/*__THREE__*/</script>
+<script>/*__DATA__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>

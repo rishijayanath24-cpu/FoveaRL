@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# LaTeX build by-products
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# Run logs
+vr_teleop_rl/*_log*.txt
+vr_teleop_rl/*_err*.txt
+
+# Paper manuscript stays private until published (figures + tables are public)
+paper/main.tex
+paper/main.pdf
+paper/IEEEtran.cls
+
+# Not part of the public project: per-student university reports (personal
+# details) and the conference's LaTeX template bundle
+report/
+latex_template_extracted/
+conference-latex-template.zip
+
+# Local scratch
+demo/vendor_dl/*.zip
+.DS_Store
+Thumbs.db

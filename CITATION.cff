@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this simulator or build on these results, please cite it as below."
+title: "FoveaRL: A Simulation Study of Reward Design for Reinforcement-Learning-Based Foveated Streaming in VR Teleoperation of Mobile Robots"
+type: software
+authors:
+  - name: "Rishi Jayanath A"
+  - name: "Adwaith Sajikumar"
+  - name: "Anirudh M R"
+  - name: "Ashish Mathew"
+  - name: "Jeremy Joe Thomas"
+  - name: "R Priscilla Joy"
+repository-code: "https://github.com/rishijayanath24-cpu/FoveaRL"
+url: "https://rishijayanath24-cpu.github.io/FoveaRL/"
+license: MIT
+date-released: "2026-10-29"
+keywords:
+  - virtual reality
+  - teleoperation
+  - foveated streaming
+  - reinforcement learning
+  - mobile robots
+  - reward design
+abstract: >-
+  Simulation study of reward design for double-DQN agents that adapt foveation
+  radius, peripheral resolution and bitrate for VR teleoperation of a mobile
+  robot over variable networks. A latency-aware quality-of-experience reward
+  matched the strongest fixed setting on task success; a task-aware reward with
+  a control-error term was markedly worse, and ablations isolate that term as
+  the cause.

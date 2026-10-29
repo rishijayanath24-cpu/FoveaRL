@@ -1,0 +1,37 @@
+\begin{tabular}{lrrrrr}
+\hline
+Method & Success (\%) & Coll. & $Q$ & Mbps & Return \\
+\hline
+\multicolumn{6}{l}{\textit{Stable}} \\
+\hspace{1mm}Fixed-Low & 15$\pm$11 & 1.82 & 0.43 & 0.16 & $-$48 \\
+\hspace{1mm}Fixed-Mid & 92$\pm$8 & 0.07 & 0.85 & 1.8 & $-$11 \\
+\hspace{1mm}Fixed-High & 98$\pm$5 & 0.03 & 1.00 & 12.0 & $-$62 \\
+\hspace{1mm}Rule-ABR & 95$\pm$7 & 0.05 & 0.86 & 2.5 & $-$15 \\
+\hspace{1mm}DQN-QoE & 97$\pm$4 & 0.03 & 0.90 & 1.6 & 2 \\
+\hspace{1mm}DQN-Task & 86$\pm$4 & 0.15 & 0.89 & 2.4 & $-$6 \\
+\hline
+\multicolumn{6}{l}{\textit{Congested}} \\
+\hspace{1mm}Fixed-Low & 0$\pm$0 & 2.90 & 0.40 & 0.16 & $-$78 \\
+\hspace{1mm}Fixed-Mid & 88$\pm$10 & 0.15 & 0.81 & 1.8 & $-$52 \\
+\hspace{1mm}Fixed-High & 0$\pm$0 & 0.05 & 1.00 & 12.0 & $-$346 \\
+\hspace{1mm}Rule-ABR & 70$\pm$14 & 0.47 & 0.78 & 1.7 & $-$56 \\
+\hspace{1mm}DQN-QoE & 90$\pm$3 & 0.10 & 0.88 & 2.0 & $-$45 \\
+\hspace{1mm}DQN-Task & 64$\pm$6 & 0.40 & 0.83 & 2.2 & $-$54 \\
+\hline
+\multicolumn{6}{l}{\textit{High-jitter}} \\
+\hspace{1mm}Fixed-Low & 0$\pm$0 & 2.60 & 0.41 & 0.16 & $-$71 \\
+\hspace{1mm}Fixed-Mid & 92$\pm$8 & 0.07 & 0.82 & 1.8 & $-$41 \\
+\hspace{1mm}Fixed-High & 57$\pm$16 & 0.00 & 1.00 & 12.0 & $-$146 \\
+\hspace{1mm}Rule-ABR & 92$\pm$8 & 0.07 & 0.82 & 1.8 & $-$41 \\
+\hspace{1mm}DQN-QoE & 92$\pm$4 & 0.08 & 0.91 & 2.1 & $-$29 \\
+\hspace{1mm}DQN-Task & 72$\pm$10 & 0.30 & 0.86 & 2.5 & $-$38 \\
+\hline
+\multicolumn{6}{l}{\textit{Intermittent (unseen)}} \\
+\hspace{1mm}Fixed-Low & 8$\pm$8 & 2.42 & 0.42 & 0.16 & $-$55 \\
+\hspace{1mm}Fixed-Mid & 98$\pm$5 & 0.03 & 0.83 & 1.8 & $-$52 \\
+\hspace{1mm}Fixed-High & 70$\pm$14 & 0.25 & 1.00 & 12.0 & $-$131 \\
+\hspace{1mm}Rule-ABR & 72$\pm$14 & 0.30 & 0.79 & 1.7 & $-$35 \\
+\hspace{1mm}DQN-QoE & 88$\pm$6 & 0.14 & 0.90 & 2.0 & $-$38 \\
+\hspace{1mm}DQN-Task & 71$\pm$10 & 0.34 & 0.85 & 2.6 & $-$49 \\
+\hline
+\end{tabular}
